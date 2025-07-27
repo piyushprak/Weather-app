@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Your Personal Weather Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🌤 Weather App</h1>
-    
-    <!-- Input and button for city name -->
-    <input type="text" id="cityInput" placeholder="Enter city name" />
-    <button id="searchBtn">Search</button>
+    <div class="container">
+        <header class="header">
+            <h1 class="app-title">
+                <span class="weather-icon">🌤️</span>
+                WeatherWise
+            </h1>
+            <p class="app-subtitle">Your personal weather companion</p>
+        </header>
 
-    <!-- Weather info show hoga yahan -->
-     <div id="loader" style="display: none;">Loading...</div>
-    <div class="weather-info">
-      <h2 id="cityName"></h2>
-      <p id="temperature"></p>
-      <p id="condition"></p>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+                <button id="searchBtn" class="search-btn">
+                    <span class="search-icon">🔍</span>
+                </button>
+            </div>
+            <button id="locationBtn" class="location-btn" title="Use current location">
+                <span class="location-icon">📍</span>
+                Current Location
+            </button>
+        </div>
+
+        <div class="weather-content">
+            <div class="current-weather" id="currentWeather">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+
+            <div class="forecast-section" id="forecastSection">
+                <h3 class="forecast-title">5-Day Forecast</h3>
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; Developed by Piyush prakhar| Data powered by OpenWeatherMap Api</p>
+        </footer>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
