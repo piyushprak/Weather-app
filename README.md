@@ -8,6 +8,6 @@ That’s because this app uses *OpenWeatherMap*, which updates its data every fe
 
 I've made sure to use proper units (metric) and also support coordinate-based search for better accuracy.
 
-only used - HTML 
-            VANILLA CSS 
+only used - HTML, 
+            VANILLA CSS ,
             JS
